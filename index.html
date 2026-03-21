@@ -6,145 +6,48 @@
   <title>Ravishankar Arya | Senior Client Partner</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --navy: #0a0a0a;
-      --navy-mid: #111111;
-      --gold: #c9a84c;
-      --gold-light: #e6c97a;
-      --white: #f5f5f5;
-      --muted: #888888;
-      --text: #d4d4d4;
-      --card-bg: #1a1a1a;
+      --navy: #0a0a0a; --navy-mid: #111111; --gold: #c9a84c;
+      --gold-light: #e6c97a; --white: #f5f5f5; --muted: #888888;
+      --text: #d4d4d4; --card-bg: #1a1a1a;
     }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: var(--navy);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--navy); color: var(--text); line-height: 1.7; }
 
     /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(10, 22, 40, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-      padding: 0 2rem;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px;
-    }
-    .nav-brand {
-      font-size: 1.1rem; font-weight: 700;
-      color: var(--gold); letter-spacing: 0.5px;
-    }
+    nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(10,22,40,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(201,168,76,0.2); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-brand { font-size: 1.1rem; font-weight: 700; color: var(--gold); letter-spacing: 0.5px; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      color: var(--muted); text-decoration: none;
-      font-size: 0.88rem; letter-spacing: 0.5px; text-transform: uppercase;
-      transition: color 0.2s;
-    }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.2s; }
     .nav-links a:hover { color: var(--gold); }
 
     /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      display: flex; align-items: center;
-      padding: 7rem 8% 5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    #hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 65%),
-                  radial-gradient(ellipse at 20% 80%, rgba(0,0,0,0.9) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 4rem;
-      align-items: center;
-      width: 100%; max-width: 1100px; margin: auto;
-      position: relative;
-    }
-    .hero-eyebrow {
-      font-size: 0.82rem; letter-spacing: 3px; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1rem;
-    }
-    .hero-name {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 800; line-height: 1.1;
-      color: var(--white);
-      margin-bottom: 0.6rem;
-    }
-    .hero-title {
-      font-size: 1.15rem; color: var(--gold-light);
-      font-weight: 500; margin-bottom: 0.3rem;
-    }
-    .hero-subtitle {
-      font-size: 0.95rem; color: var(--muted); margin-bottom: 2rem;
-    }
-    .hero-summary {
-      font-size: 1.02rem; color: var(--text);
-      max-width: 620px; margin-bottom: 2.5rem;
-      border-left: 3px solid var(--gold);
-      padding-left: 1.2rem;
-      line-height: 1.8;
-    }
+    #hero { min-height: 100vh; display: flex; align-items: center; padding: 7rem 8% 5rem; position: relative; overflow: hidden; }
+    #hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 65%), radial-gradient(ellipse at 20% 80%, rgba(0,0,0,0.9) 0%, transparent 60%); pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: center; width: 100%; max-width: 1100px; margin: auto; position: relative; }
+    .hero-eyebrow { font-size: 0.82rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .hero-name { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; color: var(--white); margin-bottom: 0.6rem; }
+    .hero-title { font-size: 1.15rem; color: var(--gold-light); font-weight: 500; margin-bottom: 0.3rem; }
+    .hero-subtitle { font-size: 0.95rem; color: var(--muted); margin-bottom: 2rem; }
+    .hero-summary { font-size: 1.02rem; color: var(--text); max-width: 620px; margin-bottom: 2.5rem; border-left: 3px solid var(--gold); padding-left: 1.2rem; line-height: 1.8; }
     .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn {
-      display: inline-block; padding: 0.7rem 1.8rem;
-      border-radius: 4px; font-size: 0.9rem; font-weight: 600;
-      text-decoration: none; transition: all 0.2s; letter-spacing: 0.3px;
-    }
-    .btn-primary {
-      background: var(--gold); color: var(--navy);
-    }
+    .btn { display: inline-block; padding: 0.7rem 1.8rem; border-radius: 4px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.2s; letter-spacing: 0.3px; }
+    .btn-primary { background: var(--gold); color: var(--navy); }
     .btn-primary:hover { background: var(--gold-light); }
-    .btn-outline {
-      border: 1.5px solid var(--gold); color: var(--gold);
-    }
+    .btn-outline { border: 1.5px solid var(--gold); color: var(--gold); }
     .btn-outline:hover { background: rgba(201,168,76,0.1); }
+    .hero-photo-wrap { display: flex; justify-content: center; }
+    .hero-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 4px solid var(--gold); box-shadow: 0 0 0 8px rgba(201,168,76,0.1), 0 20px 60px rgba(0,0,0,0.5); }
 
-    .hero-photo-wrap {
-      display: flex; justify-content: center;
-    }
-    .hero-photo {
-      width: 280px; height: 280px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--gold);
-      box-shadow: 0 0 0 8px rgba(201,168,76,0.1), 0 20px 60px rgba(0,0,0,0.5);
-    }
-    .hero-photo-placeholder {
-      width: 280px; height: 280px;
-      border-radius: 50%;
-      border: 4px solid var(--gold);
-      box-shadow: 0 0 0 8px rgba(201,168,76,0.1), 0 20px 60px rgba(0,0,0,0.5);
-      background: var(--navy-mid);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 0.5rem; color: var(--muted); font-size: 0.85rem; text-align: center;
-    }
-    .hero-photo-placeholder svg { opacity: 0.4; }
+    /* ── METRICS BAR ── */
+    .metrics-bar { background: var(--card-bg); border-top: 1px solid rgba(201,168,76,0.15); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 2rem 8%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .metric-item { text-align: center; }
+    .metric-value { font-size: 1.8rem; font-weight: 800; color: var(--gold); line-height: 1; }
+    .metric-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.4; }
 
     /* ── CONTACT BAR ── */
-    .contact-bar {
-      background: var(--card-bg);
-      border-top: 1px solid rgba(201,168,76,0.15);
-      border-bottom: 1px solid rgba(201,168,76,0.15);
-      padding: 1rem 8%;
-      display: flex; gap: 2.5rem; flex-wrap: wrap; align-items: center;
-    }
-    .contact-item {
-      display: flex; align-items: center; gap: 0.5rem;
-      font-size: 0.88rem; color: var(--muted);
-    }
+    .contact-bar { background: #141414; border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); padding: 1rem 8%; display: flex; gap: 2.5rem; flex-wrap: wrap; align-items: center; }
+    .contact-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; color: var(--muted); }
     .contact-item a { color: var(--gold); text-decoration: none; }
     .contact-item a:hover { text-decoration: underline; }
     .contact-icon { color: var(--gold); flex-shrink: 0; }
@@ -152,130 +55,60 @@
     /* ── SECTIONS ── */
     section { padding: 6rem 8%; }
     section:nth-child(even) { background: var(--navy-mid); }
-
-    .section-label {
-      font-size: 0.78rem; letter-spacing: 4px; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 0.5rem;
-    }
-    .section-title {
-      font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700;
-      color: var(--white); margin-bottom: 3rem;
-      position: relative; padding-bottom: 0.8rem;
-    }
-    .section-title::after {
-      content: ''; position: absolute; bottom: 0; left: 0;
-      width: 50px; height: 3px; background: var(--gold);
-    }
+    .section-label { font-size: 0.78rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--white); margin-bottom: 3rem; position: relative; padding-bottom: 0.8rem; }
+    .section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--gold); }
     .section-inner { max-width: 1100px; margin: auto; }
 
     /* ── COMPETENCIES ── */
-    .competencies-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.2rem;
-    }
-    .comp-card {
-      background: var(--card-bg);
-      border: 1px solid rgba(201,168,76,0.12);
-      border-radius: 8px;
-      padding: 1.4rem 1.6rem;
-      display: flex; align-items: flex-start; gap: 1rem;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .comp-card:hover {
-      border-color: rgba(201,168,76,0.5);
-      transform: translateY(-2px);
-    }
-    .comp-icon {
-      width: 36px; height: 36px; flex-shrink: 0;
-      background: rgba(201,168,76,0.1);
-      border-radius: 6px; display: flex; align-items: center; justify-content: center;
-      color: var(--gold);
-    }
+    .competencies-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; }
+    .comp-card { background: var(--card-bg); border: 1px solid rgba(201,168,76,0.12); border-radius: 8px; padding: 1.4rem 1.6rem; display: flex; align-items: flex-start; gap: 1rem; transition: border-color 0.2s, transform 0.2s; }
+    .comp-card:hover { border-color: rgba(201,168,76,0.5); transform: translateY(-2px); }
+    .comp-icon { width: 36px; height: 36px; flex-shrink: 0; background: rgba(201,168,76,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--gold); }
     .comp-text { font-size: 0.92rem; color: var(--text); line-height: 1.5; }
 
     /* ── EXPERIENCE ── */
     .timeline { position: relative; }
-    .timeline::before {
-      content: '';
-      position: absolute; left: 0; top: 8px; bottom: 0;
-      width: 2px; background: rgba(201,168,76,0.2);
-    }
-    .timeline-item {
-      position: relative; padding-left: 2.5rem; margin-bottom: 3rem;
-    }
-    .timeline-dot {
-      position: absolute; left: -6px; top: 8px;
-      width: 14px; height: 14px; border-radius: 50%;
-      background: var(--gold); box-shadow: 0 0 0 4px rgba(201,168,76,0.15);
-    }
-    .timeline-company {
-      font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.1rem;
-    }
-    .timeline-role {
-      font-size: 0.95rem; color: var(--gold-light); font-weight: 600; margin-bottom: 0.2rem;
-    }
-    .timeline-period {
-      font-size: 0.8rem; color: var(--muted); letter-spacing: 0.5px; margin-bottom: 1rem;
-    }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 0; width: 2px; background: rgba(201,168,76,0.2); }
+    .timeline-item { position: relative; padding-left: 2.5rem; margin-bottom: 3.5rem; }
+    .timeline-dot { position: absolute; left: -6px; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(201,168,76,0.15); }
+    .timeline-company { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.1rem; }
+    .timeline-role { font-size: 0.95rem; color: var(--gold-light); font-weight: 600; margin-bottom: 0.2rem; }
+    .timeline-period { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.5px; margin-bottom: 1.2rem; }
     .timeline-bullets { list-style: none; }
-    .timeline-bullets li {
-      font-size: 0.92rem; color: var(--text);
-      padding: 0.25rem 0 0.25rem 1.2rem;
-      position: relative; line-height: 1.6;
-    }
-    .timeline-bullets li::before {
-      content: '▹';
-      position: absolute; left: 0;
-      color: var(--gold); font-size: 0.85rem;
-    }
+    .timeline-bullets li { font-size: 0.92rem; color: var(--text); padding: 0.3rem 0 0.3rem 1.2rem; position: relative; line-height: 1.65; }
+    .timeline-bullets li::before { content: '▹'; position: absolute; left: 0; color: var(--gold); font-size: 0.85rem; top: 0.35rem; }
+
+    /* ── HIGHLIGHT STORY CARDS ── */
+    .story-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.5rem; }
+    .story-card { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 1.4rem 1.6rem; }
+    .story-card-tag { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .story-card-title { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem; line-height: 1.4; }
+    .story-card-body { font-size: 0.88rem; color: var(--text); line-height: 1.65; }
 
     /* ── SUB-ROLES ── */
-    .sub-roles { margin-top: 1.2rem; }
-    .sub-role { margin-bottom: 1.5rem; }
+    .sub-roles { margin-top: 1.4rem; border-left: 2px solid rgba(201,168,76,0.12); padding-left: 1.2rem; }
+    .sub-role { margin-bottom: 1.8rem; }
     .sub-role-title { font-size: 0.93rem; font-weight: 700; color: var(--white); }
-    .sub-role-period { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .sub-role-period { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.6rem; }
 
     /* ── SKILLS ── */
-    .skills-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .skill-pill {
-      background: var(--card-bg);
-      border: 1px solid rgba(201,168,76,0.15);
-      border-radius: 6px; padding: 0.8rem 1.2rem;
-      font-size: 0.88rem; color: var(--text);
-      text-align: center; transition: border-color 0.2s;
-    }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .skill-pill { background: var(--card-bg); border: 1px solid rgba(201,168,76,0.15); border-radius: 6px; padding: 0.8rem 1.2rem; font-size: 0.88rem; color: var(--text); text-align: center; transition: border-color 0.2s; }
     .skill-pill:hover { border-color: var(--gold); color: var(--gold-light); }
 
     /* ── EDUCATION ── */
     .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    .edu-card {
-      background: var(--card-bg);
-      border: 1px solid rgba(201,168,76,0.12);
-      border-radius: 8px; padding: 1.8rem;
-    }
+    .edu-card { background: var(--card-bg); border: 1px solid rgba(201,168,76,0.12); border-radius: 8px; padding: 1.8rem; }
     .edu-degree { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
     .edu-school { font-size: 0.9rem; color: var(--gold-light); }
 
     /* ── INTERESTS ── */
     .interest-wrap { display: flex; gap: 1.2rem; flex-wrap: wrap; }
-    .interest-tag {
-      background: rgba(201,168,76,0.08);
-      border: 1px solid rgba(201,168,76,0.25);
-      border-radius: 30px; padding: 0.55rem 1.4rem;
-      font-size: 0.9rem; color: var(--gold-light);
-    }
+    .interest-tag { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25); border-radius: 30px; padding: 0.55rem 1.4rem; font-size: 0.9rem; color: var(--gold-light); }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--navy);
-      border-top: 1px solid rgba(201,168,76,0.1);
-      text-align: center; padding: 2.5rem 2rem;
-      font-size: 0.82rem; color: var(--muted);
-    }
+    footer { background: var(--navy); border-top: 1px solid rgba(201,168,76,0.1); text-align: center; padding: 2.5rem 2rem; font-size: 0.82rem; color: var(--muted); }
     footer a { color: var(--gold); text-decoration: none; }
 
     /* ── RESPONSIVE ── */
@@ -286,7 +119,7 @@
       #hero { padding: 5rem 5% 3rem; }
       .hero-grid { grid-template-columns: 1fr; text-align: center; }
       .hero-photo-wrap { order: -1; }
-      .hero-photo, .hero-photo-placeholder { width: 200px; height: 200px; }
+      .hero-photo { width: 200px; height: 200px; }
       .hero-summary { border-left: none; border-top: 3px solid var(--gold); padding: 1rem 0 0; }
       .hero-cta { justify-content: center; }
       section { padding: 4rem 5%; }
@@ -294,6 +127,8 @@
       .timeline::before { display: none; }
       .timeline-item { padding-left: 0; }
       .timeline-dot { display: none; }
+      .story-cards { grid-template-columns: 1fr; }
+      .metrics-bar { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -315,16 +150,12 @@
 <section id="hero">
   <div class="hero-grid">
     <div>
-      <p class="hero-eyebrow">Senior Client Partner &nbsp;|&nbsp; Singapore</p>
+      <p class="hero-eyebrow">Sales Director &amp; Senior Client Partner &nbsp;|&nbsp; Singapore</p>
       <h1 class="hero-name">Ravishankar<br>Arya</h1>
       <p class="hero-title">Transportation &nbsp;|&nbsp; Logistics &nbsp;|&nbsp; Global Strategic Accounts</p>
-      <p class="hero-subtitle">DXC Technology &nbsp;&middot;&nbsp; 20+ Years of Enterprise Leadership</p>
+      <p class="hero-subtitle">DXC Technology &nbsp;&middot;&nbsp; 24 Years of Enterprise Leadership across 16+ Countries</p>
       <p class="hero-summary">
-        Transformative enterprise leader with full P&amp;L accountability and a commanding track record
-        of catalysing sustained, profitable growth across the global technology sector. An architect of
-        high-impact commercial strategies, combining deep technology fluency, delivery excellence, and
-        financial stewardship — distinctively positioned to drive enterprise leadership in the era of
-        Artificial Intelligence.
+        A rare enterprise technology executive who commands equal authority across Delivery Leadership, Solution Architecture, and P&amp;L Sales — built over 24 years and 16+ countries. Known as the trusted advisor that C-suite clients call when the stakes are highest: present in the room, hands-on in the solution, and accountable to the outcome. A compelling public speaker and recognised thought leader representing the AI and digital transformation agenda at forums across APAC.
       </p>
       <div class="hero-cta">
         <a href="#experience" class="btn btn-primary">View Experience</a>
@@ -336,6 +167,26 @@
     </div>
   </div>
 </section>
+
+<!-- METRICS BAR -->
+<div class="metrics-bar">
+  <div class="metric-item">
+    <div class="metric-value">20X</div>
+    <div class="metric-label">Portfolio Growth at DXC<br>(USD 2M → USD 40M+)</div>
+  </div>
+  <div class="metric-item">
+    <div class="metric-value">$50M</div>
+    <div class="metric-label">Landmark Deal —<br>DXC's Largest in Brunei</div>
+  </div>
+  <div class="metric-item">
+    <div class="metric-value">1,200+</div>
+    <div class="metric-label">Professionals Led<br>in Delivery</div>
+  </div>
+  <div class="metric-item">
+    <div class="metric-value">16+</div>
+    <div class="metric-label">Countries Worked<br>Across Career</div>
+  </div>
+</div>
 
 <!-- CONTACT BAR -->
 <div class="contact-bar" id="contact">
@@ -359,70 +210,60 @@
     <p class="section-label">Value Proposition</p>
     <h2 class="section-title">Core Competencies</h2>
     <div class="competencies-grid">
-
       <div class="comp-card">
         <div class="comp-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
         </div>
-        <span class="comp-text">Executive-level Commercial Acumen &amp; Strategic Revenue Leadership across ASEAN</span>
+        <span class="comp-text">Strategic P&amp;L Ownership &amp; Account Management across 13+ Enterprise Accounts</span>
       </div>
-
       <div class="comp-card">
         <div class="comp-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
         </div>
-        <span class="comp-text">P&amp;L Ownership &amp; Management — EBIT, Forecasting &amp; Budgetary Discipline</span>
+        <span class="comp-text">Revenue Growth, New Logo Acquisition &amp; Portfolio Expansion</span>
       </div>
-
-      <div class="comp-card">
-        <div class="comp-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-        </div>
-        <span class="comp-text">Results-driven Leader with Commanding Technology &amp; Industry Domain Expertise</span>
-      </div>
-
-      <div class="comp-card">
-        <div class="comp-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
-        </div>
-        <span class="comp-text">Accelerating Revenue Growth, Portfolio Expansion &amp; Market Penetration</span>
-      </div>
-
-      <div class="comp-card">
-        <div class="comp-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-        </div>
-        <span class="comp-text">Cross-border Operations Governance &amp; Enterprise-scale Delivery Excellence</span>
-      </div>
-
-      <div class="comp-card">
-        <div class="comp-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
-        </div>
-        <span class="comp-text">AI-powered Business Intelligence &amp; Predictive Decision-making (Keynote Speaker)</span>
-      </div>
-
       <div class="comp-card">
         <div class="comp-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <span class="comp-text">C-suite Alliance Building &amp; Strategic Influence across APAC</span>
+        <span class="comp-text">C-Suite Relationship Management &amp; Executive Engagement across APAC</span>
       </div>
-
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+        </div>
+        <span class="comp-text">Digital Transformation — Cloud, AI, Cybersecurity &amp; End User Compute</span>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </div>
+        <span class="comp-text">Large Team Building &amp; Cross-Geography Delivery Excellence</span>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+        </div>
+        <span class="comp-text">Solution Architecture &amp; Technology Solutioning at Enterprise Scale</span>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+        </div>
+        <span class="comp-text">Six Sigma, Process Reengineering &amp; Operational Excellence</span>
+      </div>
       <div class="comp-card">
         <div class="comp-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.34C18 2.54 15.96.5 13.5.5c-1.3 0-2.5.58-3.36 1.49L9 3.11 7.86 1.99C7 1.08 5.8.5 4.5.5 2.04.5 0 2.54 0 4.66c0 .46.1.9.18 1.34H0c-1.1 0-2 .9-2 2H0v11c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/></svg>
         </div>
-        <span class="comp-text">Enterprise Digital Transformation &amp; Disruptive Innovation Leadership</span>
+        <span class="comp-text">Financial Planning, Analytics &amp; Forecasting (FP&amp;A)</span>
       </div>
-
       <div class="comp-card">
         <div class="comp-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
         </div>
-        <span class="comp-text">High-impact Business Turnaround through Agile Transformation &amp; Six Sigma Discipline</span>
+        <span class="comp-text">Public Speaking &amp; Thought Leadership — Keynote Speaker, APAC Forums</span>
       </div>
-
     </div>
   </div>
 </section>
@@ -438,28 +279,51 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <p class="timeline-company">DXC Technology &nbsp;&middot;&nbsp; Singapore</p>
-        <p class="timeline-role">Senior Client Partner — Transportation, Logistics &amp; Strategic Accounts</p>
+        <p class="timeline-role">Sales Director &amp; Senior Client Partner — Transportation, Logistics &amp; Strategic Accounts</p>
         <p class="timeline-period">March 2018 – Present</p>
         <ul class="timeline-bullets">
-          <li>Stewarding an Annual P&amp;L of <strong>~USD 40+ million</strong> across 13+ strategic accounts, delivering consistently double-digit YoY revenue growth.</li>
-          <li>Strategically diversified and scaled the portfolio into Cloud, Digital Workplace, Cyber Security, and Analytics Services.</li>
-          <li>Entrusted C-suite advisor and long-term strategic partner to APLL, CMA CGM, ONE, RTX, OTIS, Dnata, Rolls-Royce, AET, and Toll Logistics.</li>
-          <li>Secured the most significant new logo in DXC's history in Brunei.</li>
-          <li>Elevated DXC to market leadership in ASEAN by orchestrating landmark account wins and forging a high-impact partner ecosystem across Oracle, IBM, Dell, HPI, and HPE.</li>
+          <li><strong>20X Portfolio Growth:</strong> Grew the managed portfolio from USD 2M at joining to USD 40M+ — a 20X expansion in 7 years — through landmark new logo wins, competitive account rescues, and disciplined cross-sell across Cloud, EUC, Cybersecurity, Analytics, and Application Services. Promoted to Sales Director in 2019 in recognition of this growth.</li>
+          <li>Serve as trusted strategic advisor and executive sponsor to C-suite leaders across 13+ accounts spanning Global Container Shipping Lines, 3PL &amp; Logistics Providers, Aviation Services, Energy Companies, Aerospace &amp; Defense Manufacturers, and Industrial Conglomerates.</li>
+          <li>Built a high-value partner ecosystem with leading global technology vendors, positioning DXC as the preferred enterprise technology partner across the ASEAN region.</li>
+          <li>Invited keynote speaker at multiple regional and international industry forums on AI, digital transformation, and the future of enterprise technology services — representing DXC's thought leadership agenda externally.</li>
         </ul>
+
+        <!-- Highlight story cards -->
+        <div class="story-cards">
+          <div class="story-card">
+            <div class="story-card-tag">&#9733; Landmark Win</div>
+            <div class="story-card-title">USD 50M Greenfield Deal — National Energy Corporation, Southeast Asia</div>
+            <div class="story-card-body">Won DXC's largest-ever contract in Brunei — a USD 50M, 5-year greenfield End User Compute deal — against two global IT incumbents, in a country where DXC had no legal entity. Led the entire process personally from RFP through final legal negotiation, pioneering the Device as a Service (DaaS) commercial model in the region for the first time.</div>
+          </div>
+          <div class="story-card">
+            <div class="story-card-tag">&#9733; Account Rescue</div>
+            <div class="story-card-title">Global Aerospace Engine Manufacturer — Inherited in Failure, Turned to Growth</div>
+            <div class="story-card-body">Inherited a strategic account with delivery in failure, the previous Client Partner dismissed, and renewal due in 9 months. Deployed daily on-site presence and built individual relationships across senior client leadership. Not only secured the renewal but generated the highest level of incremental project revenue in the account's DXC history.</div>
+          </div>
+          <div class="story-card">
+            <div class="story-card-tag">&#9733; Account Rescue</div>
+            <div class="story-card-title">Global Financial Services Institution — Near-Loss Converted to Growth</div>
+            <div class="story-card-body">Rescued a major banking account from near-loss within 6 months, securing the renewal and strategically expanding scope into Service Desk operations — converting a high-risk situation into an account growth story.</div>
+          </div>
+          <div class="story-card">
+            <div class="story-card-tag">&#9733; Complex Account</div>
+            <div class="story-card-title">Global Defense &amp; Aerospace Conglomerate — 16-Country APAC Mandate</div>
+            <div class="story-card-body">Assumed APAC-wide responsibility for one of DXC's largest and most complex global accounts — a 16-country engagement requiring active management of 100+ senior stakeholders across multiple business units and subsidiaries.</div>
+          </div>
+        </div>
       </div>
 
       <!-- HPE -->
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <p class="timeline-company">Hewlett-Packard Enterprise &nbsp;&middot;&nbsp; Singapore</p>
-        <p class="timeline-role">Account Executive (Enterprise Services) — Manufacturing &amp; Energy</p>
+        <p class="timeline-company">Hewlett Packard Enterprise &nbsp;&middot;&nbsp; Singapore</p>
+        <p class="timeline-role">Account Executive — Enterprise Services, Manufacturing &amp; Energy</p>
         <p class="timeline-period">August 2015 – March 2018</p>
         <ul class="timeline-bullets">
-          <li>Engineered <strong>100% revenue growth</strong> for the Chevron Account across End User Compute within a single year of assuming the role.</li>
-          <li>Orchestrated a <strong>25X portfolio expansion</strong> for VF Corp over 3 years by introducing transformative solutions in forecasting analytics, dynamic discounting, and real-time customer engagement.</li>
-          <li>Displaced entrenched incumbents to secure a landmark security consulting mandate in Vietnam for VinGroup.</li>
-          <li>Re-secured and expanded the ING Bank partnership with an extended remit into Service Desk operations.</li>
+          <li><strong>HP's Largest-Ever Consulting Deal in Vietnam:</strong> Identified a cybersecurity opportunity at a leading Southeast Asian conglomerate by leveraging an existing hardware relationship to gain direct CIO access. Recognised the threat environment driving demand for governance-level security work, assembled a team of senior security experts, and won HP's largest-ever consulting engagement in Vietnam — a comprehensive ISO 27001 cybersecurity maturity assessment.</li>
+          <li><strong>APAC Expansion &amp; Offshore Centre Setup:</strong> Extended an F&amp;A BPS engagement from an India base into a full APAC programme for a global apparel &amp; footwear conglomerate, including establishing HP's first F&amp;A delivery centre in China to serve their Chinese operations — a complex multi-geography build requiring cultural fluency, operational rigour, and deep client trust.</li>
+          <li><strong>100% Revenue Growth in Year One:</strong> Inherited a geographically limited workplace services account for a global energy supermajor. Expanded the footprint into Southeast Asia and broke into Application Services — a new service line — delivering 100% revenue growth within the first year.</li>
+          <li>Renewed and commercially restructured a major banking account engagement, extending scope and improving commercial terms.</li>
         </ul>
       </div>
 
@@ -470,38 +334,37 @@
         <p class="timeline-role">Center Delivery Leader — Finance &amp; Accounting BPO</p>
         <p class="timeline-period">November 2009 – August 2015</p>
         <ul class="timeline-bullets">
-          <li>Architected and commanded end-to-end delivery operations with a team of <strong>~1,200 professionals</strong>, generating transformative revenue growth and operational excellence for P&amp;G, VF Corp, and Sun Chemicals.</li>
-          <li>Pioneered industry-leading Financial Planning &amp; Analytics capabilities — encompassing Budgeting, Forecasting, and Variance Analysis — for VF Corp and AOL.</li>
-          <li>Deployed proprietary analytics capabilities that unlocked new client revenue streams through precision financial and media intelligence.</li>
+          <li><strong>1,200-Person Delivery Organisation:</strong> Built and led end-to-end F&amp;A BPO delivery operations with approximately 1,200 professionals, supporting global enterprises across Finance &amp; Accounting functions spanning Procure-to-Pay, Order-to-Cash, and Record-to-Report.</li>
+          <li><strong>Career-Defining Commercial Initiative:</strong> During a global apparel conglomerate's acquisition of an Indian manufacturing firm, identified significant F&amp;A data integrity issues and personally pitched the CFO to outsource the entire accounting and FP&amp;A function. Won a USD 300K seed deal that marked a pivotal shift from delivery leadership to commercial P&amp;L ownership — subsequently expanding the account into a USD 5M APAC-wide F&amp;A BPS programme, including a new delivery centre in China.</li>
+          <li><strong>Global Process Reengineering:</strong> Led end-to-end reengineering of P2P, O2C, and R2R processes for a global specialty chemicals manufacturer across Europe and the Americas, overseeing SAP upgrades and OpenText workflow implementations that standardised the client's global financial operations.</li>
+          <li>Pioneered Financial Planning &amp; Analytics (FP&amp;A) capabilities — budgeting, forecasting, and variance analysis — for multiple enterprise clients, establishing a new service offering within HP's BPO practice.</li>
         </ul>
 
         <div class="sub-roles">
           <div class="sub-role">
-            <p class="sub-role-title">Operations Manager (P&amp;G)</p>
+            <p class="sub-role-title">Operations Manager — Accounts Payable BPO</p>
             <p class="sub-role-period">May 2008 – November 2009</p>
             <ul class="timeline-bullets">
-              <li>Delivered a <strong>20–25% cost reduction</strong> below budget in Accounts Payable BPO operations through rigorous process innovation and lean redesign.</li>
-              <li>Attained record-setting customer satisfaction metrics by consistently surpassing contractual SLAs and proactively aligning operations with client strategic imperatives.</li>
-              <li>Directed seamless ERP integration across multiple M&amp;A transitions, ensuring operational continuity.</li>
+              <li>Reduced AP BPO operational costs by 20–25% below budget through targeted process redesign and automation for a global consumer goods corporation, maintaining full compliance and service quality.</li>
+              <li>Achieved the account's best-ever customer satisfaction scores by consistently exceeding contractual SLAs and proactively aligning operations with client strategic priorities.</li>
+              <li>Led ERP system implementations across multiple client mergers and acquisitions, ensuring business continuity and seamless integration across complex transaction environments.</li>
             </ul>
           </div>
-
           <div class="sub-role">
-            <p class="sub-role-title">Worldwide Process Owner (Finance &amp; Accounting)</p>
+            <p class="sub-role-title">Worldwide Process Owner — Finance &amp; Accounting</p>
             <p class="sub-role-period">May 2007 – April 2008</p>
             <ul class="timeline-bullets">
-              <li>Instituted globally standardised finance process frameworks, delivering measurable operational uplift and structural cost efficiencies at enterprise scale.</li>
-              <li>Safeguarded financial integrity and maximised revenue continuity during mission-critical SAP upgrades and OpenText workflow implementations for Sun Chemical.</li>
+              <li>Standardised global Finance &amp; Accounting processes across multiple geographies, delivering significant operational efficiencies and cost reductions at scale.</li>
+              <li>Ensured financial integrity and revenue maximisation during critical SAP upgrades and OpenText workflow implementations for a global specialty chemicals account.</li>
             </ul>
           </div>
-
           <div class="sub-role">
             <p class="sub-role-title">Senior Finance Supervisor</p>
             <p class="sub-role-period">May 2002 – April 2007</p>
             <ul class="timeline-bullets">
-              <li>Cultivated a high-performing team of <strong>~50 professionals</strong>, executing flawless purchasing process transitions across Europe and Latin America.</li>
-              <li>Drove an 80% Six Sigma Green Belt certification rate within the team, establishing a culture of measurable process discipline and quality excellence.</li>
-              <li>Spearheaded a 30-strong team of procurement specialists through complex cross-continental transitions, delivering sustained operational excellence and material resource savings.</li>
+              <li>Built and led a 50-member procurement team delivering seamless process transitions across European and Latin American markets, consistently exceeding client-defined performance metrics.</li>
+              <li>Achieved an 80% Six Sigma Green Belt certification rate within the team — well above industry norms — instilling a culture of process rigour and continuous improvement.</li>
+              <li>Led a 30-member specialist team transitioning purchasing projects across multiple countries, delivering measurable resource savings and operational excellence at every milestone.</li>
             </ul>
           </div>
         </div>
@@ -517,16 +380,16 @@
     <p class="section-label">Leadership Arsenal</p>
     <h2 class="section-title">Skills &amp; Certifications</h2>
     <div class="skills-grid">
-      <div class="skill-pill">Predictive Analytics</div>
-      <div class="skill-pill">Strategic Business Development</div>
-      <div class="skill-pill">SAP &amp; OpenText Workflow</div>
-      <div class="skill-pill">Cloud Computing</div>
-      <div class="skill-pill">Digital Workplace</div>
-      <div class="skill-pill">Cyber Security</div>
-      <div class="skill-pill">Artificial Intelligence</div>
       <div class="skill-pill">Six Sigma Green Belt</div>
       <div class="skill-pill">Lean Methodologies</div>
-      <div class="skill-pill">Process Transformation</div>
+      <div class="skill-pill">SAP &amp; OpenText Workflow</div>
+      <div class="skill-pill">ISO 27001 Security Governance</div>
+      <div class="skill-pill">Cloud Computing</div>
+      <div class="skill-pill">Artificial Intelligence</div>
+      <div class="skill-pill">Cybersecurity</div>
+      <div class="skill-pill">Digital Workplace &amp; EUC</div>
+      <div class="skill-pill">Device as a Service (DaaS)</div>
+      <div class="skill-pill">FP&amp;A &amp; Predictive Analytics</div>
       <div class="skill-pill">P&amp;L Management</div>
       <div class="skill-pill">CXO Engagement</div>
     </div>
@@ -544,7 +407,7 @@
         <p class="edu-school">S.P. Jain School of Management &nbsp;&middot;&nbsp; Singapore</p>
       </div>
       <div class="edu-card">
-        <p class="edu-degree">Bachelor of Arts in French Literature</p>
+        <p class="edu-degree">Bachelor of Arts — French Literature</p>
         <p class="edu-school">Jawaharlal Nehru University &nbsp;&middot;&nbsp; New Delhi</p>
       </div>
     </div>
@@ -559,13 +422,15 @@
     <div class="interest-wrap">
       <span class="interest-tag">AI &amp; Future Technological Evolution</span>
       <span class="interest-tag">Reading Non-Fiction</span>
+      <span class="interest-tag">Enterprise Digital Transformation</span>
+      <span class="interest-tag">Public Speaking &amp; Leadership</span>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>&copy; 2026 Ravishankar Arya &nbsp;&middot;&nbsp; Senior Client Partner, DXC Technology &nbsp;&middot;&nbsp;
+  <p>&copy; 2026 Ravishankar Arya &nbsp;&middot;&nbsp; Sales Director &amp; Senior Client Partner, DXC Technology &nbsp;&middot;&nbsp;
     <a href="https://linkedin.com/in/ravishankar-arya-14381162" target="_blank">LinkedIn</a>
   </p>
 </footer>
